@@ -4,6 +4,7 @@ class Gender {
 
 	String genderKey
 	String remark
+    
 
     static constraints = {
     	genderKey(nullable:false,blank:false)
