@@ -1,5 +1,6 @@
 import com.inovati.insurance.*
 import grails.util.Environment
+import java.util.*
 class BootStrap {
 
     def init = { servletContext ->
@@ -21,6 +22,10 @@ class BootStrap {
     							         description:"Moneda utilizada en el sector de seguros de vida").save()
     	def paymentForm = new PaymentForm(name:"Mensual").save()
 		def basicRaw = 		new BasicRaw(paymentConduit: "C.A. CREDITO",
+										 accountNumber: 1234,
+										 securityCode: 123,
+										 bank : "Banamex",
+										 expiration: new Date(),
 										 currency: currency,
 										 paymentForm: paymentForm,
 										 firstReceipt: 122.49,
@@ -38,7 +43,11 @@ class BootStrap {
 										city:"Distrito Federal",
 										state:"Edo. de Mexico",
 										delegation:"").save()
-		def workAddress=	new Address(city:"Distrito Federal",
+		def workAddress=	new Address(street:"",
+										number:"",
+										colony:"",
+										postalCode:01730,
+										city:"Distrito Federal",
 										state:"Edo. de Mexico",
 										delegation:"").save()
 		def contractor = 	new Person( name:"Claudia",
@@ -46,7 +55,7 @@ class BootStrap {
 										secondLastname:"Bernal",
 										gender: contractorGender,
 										profession:profession,
-										//birthDate: 
+										birthDate: new Date(), 
 										personalAddress:personalAddress,
 										workCompanyName:" Solutia Mexico, SDRL de CV",
 										workAddress:workAddress,
@@ -58,7 +67,7 @@ class BootStrap {
 										secondLastname:"Quiroz",
 										gender: contractorGender,
 										profession:profession,
-										//birthDate: 
+										birthDate: new Date(),
 										personalAddress:personalAddress,
 										workAddress:workAddress,
 										telephone1:"(55) 5635-7780",
@@ -69,6 +78,6 @@ class BootStrap {
 										payer:payer
 
 										).save()
-		
+	
 	}
 }
