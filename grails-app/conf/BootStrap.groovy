@@ -18,9 +18,9 @@ class BootStrap {
     }
 
     void createAdminUserIfRequired() {
-    	def paymentMethod = new PaymentMethod(name:"Debito").save
-    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Credito").save
-    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Debito").save
+    	def paymentMethod = new PaymentMethod(name:"Debito").save()
+    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Credito").save()
+    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Debito").save()
     	def currency = new Currency(name: "Udis",
     							         description:"Moneda utilizada en el sector de seguros de vida").save()
     	def paymentForm = new PaymentForm(name:"Mensual").save()
@@ -75,12 +75,12 @@ class BootStrap {
 										workAddress:workAddress,
 										telephone1:"(55) 5635-7780",
 										telephone2:"").save()
-		def policy = 		new Policy( basicRaw:basicRaw,
+		/*def policy = 		new Policy( basicRaw:basicRaw,
 										plannedRaw:plannedRaw,
 										contractor:contractor,
 										payer:payer
 
 										).save()
-	
+	*/
 	}
 }
