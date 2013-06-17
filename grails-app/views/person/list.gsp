@@ -32,6 +32,10 @@
 					
 						<th><g:message code="person.gender.label" default="Gender" /></th>
 					
+						<g:sortableColumn property="birthDate" title="${message(code: 'person.birthDate.label', default: 'Birth Date')}" />
+					
+						<th><g:message code="person.personalAddress.label" default="Personal Address" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -45,6 +49,10 @@
 						<td>${fieldValue(bean: personInstance, field: "secondLastname")}</td>
 					
 						<td>${fieldValue(bean: personInstance, field: "gender")}</td>
+					
+						<td><g:formatDate date="${personInstance.birthDate}" /></td>
+					
+						<td>${fieldValue(bean: personInstance, field: "personalAddress")}</td>
 					
 					</tr>
 				</g:each>

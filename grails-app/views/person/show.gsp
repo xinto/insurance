@@ -59,6 +59,93 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${personInstance?.birthDate}">
+				<li class="fieldcontain">
+					<span id="birthDate-label" class="property-label"><g:message code="person.birthDate.label" default="Birth Date" /></span>
+					
+						<span class="property-value" aria-labelledby="birthDate-label"><g:formatDate date="${personInstance?.birthDate}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.insured}">
+				<li class="fieldcontain">
+					<span id="insured-label" class="property-label"><g:message code="person.insured.label" default="Insured" /></span>
+					
+						<g:each in="${personInstance.insured}" var="i">
+						<span class="property-value" aria-labelledby="insured-label"><g:link controller="insured" action="show" id="${i.id}">${i?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.personalAddress}">
+				<li class="fieldcontain">
+					<span id="personalAddress-label" class="property-label"><g:message code="person.personalAddress.label" default="Personal Address" /></span>
+					
+						<span class="property-value" aria-labelledby="personalAddress-label"><g:link controller="address" action="show" id="${personInstance?.personalAddress?.id}">${personInstance?.personalAddress?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.policyContractor}">
+				<li class="fieldcontain">
+					<span id="policyContractor-label" class="property-label"><g:message code="person.policyContractor.label" default="Policy Contractor" /></span>
+					
+						<g:each in="${personInstance.policyContractor}" var="p">
+						<span class="property-value" aria-labelledby="policyContractor-label"><g:link controller="policy" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.policyPayer}">
+				<li class="fieldcontain">
+					<span id="policyPayer-label" class="property-label"><g:message code="person.policyPayer.label" default="Policy Payer" /></span>
+					
+						<g:each in="${personInstance.policyPayer}" var="p">
+						<span class="property-value" aria-labelledby="policyPayer-label"><g:link controller="policy" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.profession}">
+				<li class="fieldcontain">
+					<span id="profession-label" class="property-label"><g:message code="person.profession.label" default="Profession" /></span>
+					
+						<span class="property-value" aria-labelledby="profession-label"><g:link controller="profession" action="show" id="${personInstance?.profession?.id}">${personInstance?.profession?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.telephone1}">
+				<li class="fieldcontain">
+					<span id="telephone1-label" class="property-label"><g:message code="person.telephone1.label" default="Telephone1" /></span>
+					
+						<span class="property-value" aria-labelledby="telephone1-label"><g:fieldValue bean="${personInstance}" field="telephone1"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.telephone2}">
+				<li class="fieldcontain">
+					<span id="telephone2-label" class="property-label"><g:message code="person.telephone2.label" default="Telephone2" /></span>
+					
+						<span class="property-value" aria-labelledby="telephone2-label"><g:fieldValue bean="${personInstance}" field="telephone2"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.workAddress}">
+				<li class="fieldcontain">
+					<span id="workAddress-label" class="property-label"><g:message code="person.workAddress.label" default="Work Address" /></span>
+					
+						<span class="property-value" aria-labelledby="workAddress-label"><g:link controller="address" action="show" id="${personInstance?.workAddress?.id}">${personInstance?.workAddress?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

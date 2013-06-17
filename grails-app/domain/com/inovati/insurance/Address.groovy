@@ -10,8 +10,8 @@ class Address {
 	String state
 	String delegation
 
-	static hasMany = [people:Person, houses:AssuredHouse]
-
+	static hasMany = [peopleWork:Person,peoplePersonal:Person,houses:AssuredHouse]
+	static mappedBy = [peopleWork:"workAddress",peoplePersonal:"personalAddress"]
 
     static constraints = {
     }

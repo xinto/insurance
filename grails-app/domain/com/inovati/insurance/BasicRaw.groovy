@@ -6,13 +6,13 @@ class BasicRaw {
 	Integer accountNumber
 	String bank
 	Integer securityCode
-	Currency Currency
+	Currency currency
 	PaymentForm paymentForm
-	String firstReceipt
-	String subsecuentReceipt
+	Double firstReceipt
+	Double subsecuentReceipt
 	Date expiration
-	String annualizedRaw
-	String comissionRaw
+	Double annualizedRaw
+	Double comissionRaw
 
 	static hasMany=[policys:Policy]
 

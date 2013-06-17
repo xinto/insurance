@@ -7,7 +7,7 @@ class ProductType {
 	static hasMany = [productsProductTypes:ProductsProductTypes]
 
     static constraints = {
-    	description(nullable:false,blank:false)
+    	type(nullable:false,blank:false)
     }
 
     String toString(){

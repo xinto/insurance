@@ -1,7 +1,7 @@
 package com.inovati.insurance
 
 class PlannedRaw {
-	String annualiedPlannedRaw
+	Doyble annualiedPlannedRaw
 	Integer chargue
 	PaymentForm paymentForm
 	Integer accountNumber

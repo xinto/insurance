@@ -9,11 +9,15 @@ class Person {
 	Profession profession
 	Date birthDate
 	Address personalAddress
+	String workCompanyName
 	Address workAddress
 	String telephone1
 	String telephone2
+	String email
 
-	static hasMany = [policys:Policy,insured:Insured]
+	static hasMany = [policyPayer:Policy, policyContractor:Policy,insured:Insured]
+	static mappedBy = [policyPayer:"payer",policyContractor:"contractor"]
+
 
     static constraints = {
 
