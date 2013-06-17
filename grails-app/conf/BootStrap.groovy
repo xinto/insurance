@@ -19,8 +19,8 @@ class BootStrap {
 
     void createAdminUserIfRequired() {
     	def paymentMethod = new PaymentMethod(name:"Debito").save()
-    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Credito").save()
-    	def paymentMethod = new PaymentMethod(name:"Tarjeta de Debito").save()
+    	def paymentMethod1 = new PaymentMethod(name:"Tarjeta de Credito").save()
+    	def paymentMethod2 = new PaymentMethod(name:"Tarjeta de Debito").save()
     	def currency = new Currency(name: "Udis",
     							         description:"Moneda utilizada en el sector de seguros de vida").save()
     	def paymentForm = new PaymentForm(name:"Mensual").save()
