@@ -20,6 +20,6 @@ class BasicRaw {
     }
 
     String toString(){
-    	$"{id}"
+    	"${id}"
     }
 }

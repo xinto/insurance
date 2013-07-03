@@ -14,8 +14,13 @@ class Person {
 	String telephone1
 	String telephone2
 	String email
+	String preferedName
+	String rfc
+	Boolean active
+	Boolean isPayer
+	Boolean isContractor
 
-	static hasMany = [policyPayer:Policy, policyContractor:Policy,insured:Insured]
+	static hasMany = [policyPayer:Policy, policyContractor:Policy,insured:Insured,accounts:Account]
 	static mappedBy = [policyPayer:"payer",policyContractor:"contractor"]
 
 
