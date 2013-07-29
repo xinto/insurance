@@ -25,11 +25,14 @@
 <div class="errors" role="status">${flash.errors}</div>
 			<table id="clients">
 			<tr>
-        <th>Folio</th>
-				<th>Nombre</th>
-				<th>Profesion</th>
-				<th>Direccion</th>
-				<th>Telefono</th>
+        <th>ID</th>
+				<th>Folio</th>
+        <th>Nombre</th>
+        <th>Segundo Nombre</th>
+        <th>Apellido</th>
+        <th>Segundo Apellido</th>
+				
+		
         
 			</tr>
 
@@ -37,10 +40,14 @@
           <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
             
            <td>${fieldValue(bean: payer, field: "id")}</td>
+           <td>${fieldValue(bean: payer, field: "isPayer")}</td>
            <td>${fieldValue(bean: payer, field: "name")}</td>
-           <td>${fieldValue(bean: payer, field: "profession")}</td>
-           <td>${fieldValue(bean: payer, field: "address")}</td>
-           <td>${fieldValue(bean: payer, field: "telephone1")}</td>
+           <td>${fieldValue(bean: payer, field: "secondName")}</td>
+           <td>${fieldValue(bean: payer, field: "lastname")}</td>
+           <td>${fieldValue(bean: payer, field: "secondLastname")}</td>
+           
+           
+           
             
           
           </tr>

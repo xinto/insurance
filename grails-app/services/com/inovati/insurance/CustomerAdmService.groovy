@@ -12,7 +12,7 @@ class CustomerAdmService {
     }
 
     def getPayers() {
-    	def payersList = Person.findAll("from Person as p where p.isPayer = TRUE order by p.id") 
+    	def payersList = Person.findAll("from Person as p where p.isPayer != null order by p.id") 
     	payersList
     }
 
