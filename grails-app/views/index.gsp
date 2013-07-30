@@ -1,101 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="layout" content="main"/>
+    </head>
+    <body>
+            <div class="container">
+
+        <!--row of 16's (16 columns)-->
+        <div class="row">
+            <div class="col_1">
+
+                <p>Polizas vencidas del mes anterior <span class="secondary badge" style="font-size:25px;height:22px;">1</span> </p>
+                
+                <p>Polizas pendientes de pago con 3 dias de prorroga <span class="danger badge" style="font-size:25px;height:22px;">1</span></p>
+
+                 <p>Polizas pendientes de pago con 5 dias de prorroga <span class="danger badge" style="font-size:25px;height:22px;">3</span></p>
+
+                 <p>Polizas pendientes de pago con 10 dias de prorroga <span class="warning badge" style="font-size:25px;height:22px;">2</span></p>
+
+                <p>Polizas pendientes de pago con 30 dias de prorroga <span class="secondary badge" style="font-size:25px;height:22px;">10</span></p>
+
+                 
+
+                
+
+                 
+
+
+                <p>Polizas por renovar del mes anterior <span class="secondary badge" style="font-size:25px;height:22px;">0</span></p>
+
+                <p>Polizas por renovar en el mes actual <span class="danger badge" style="font-size:25px;height:22px;">5</span></p>
+
+                <p>Polizas por renovar del siguiente mes <span class="warning badge" style="font-size:25px;height:22px;">12</span></p>
+
+                <p>Polizas por renovar dentro de 2 meses <span class="secondary badge" style="font-size:25px;height:22px;">8</span></p>
+                 
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </body>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Bienvenido</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
-
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
-
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
-            
-			#status li {
-				line-height: 1.3;
-			}
-
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
-
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
-
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
-
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
-
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		
-		<div id="page-body" role="main">
-			<h1>Bienvenido</h1>
-			<p>Sistema administrativo de polizas
-			</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Controladores:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
-</html>

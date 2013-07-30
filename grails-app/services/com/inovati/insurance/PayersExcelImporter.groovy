@@ -1,4 +1,5 @@
 package com.inovati.insurance
+
 import org.grails.plugins.excelimport.*
 import org.joda.time.LocalDate
 import sample.*
@@ -33,7 +34,7 @@ class PayersExcelImporter extends AbstractExcelImporter {
     		ExcelImportService.getService()
     	}
 
-      public ExcelImporter(fileName) {
+      public PayersExcelImporter(def fileName) {
         super(fileName)
       }
 

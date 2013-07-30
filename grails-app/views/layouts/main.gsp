@@ -1,96 +1,85 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> 
-<html lang="en" class="no-js"><!--<![endif]-->
+<html>
 	<head>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Seguros Monterrey</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title><g:layoutTitle default="Seguros"/></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--
-		<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
-		<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
-	-->	
-    	<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-		<link rel="stylesheet" href="${resource(dir: 'css', file: 'normalize.css')}" type="text/css">
-	    <link rel="stylesheet" href="${resource(dir: 'css', file: '34gs.css')}" type="text/css">
-	    <link rel="stylesheet" href="${resource(dir: 'css', file: '34gs-queries.css')}" type="text/css">
-		<script src="${resource(dir: 'js', file: 'application.js')}"></script>
-	  
-	    <script src="${resource(dir: 'js', file: 'vendor/modernizr-2.6.2.min.js')}"></script>
-	    <script src="${resource(dir: 'js', file: 'plugins.js')}"></script>
-	    <script src="${resource(dir: 'js', file: 'main.js')}"></script>
-	    <script src="${resource(dir: 'js', file: 'vendor/jquery-1.9.1.min.js')}"></script>
+		<title><g:layoutTitle default="Seguros Monterrey"/></title>
+		
 
+    <link rel="stylesheet" href="${resource(dir: 'css/gumby', file: 'gumby.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css/gumby', file: 'style.css')}" type="text/css">
+
+    <!-- actually imports '/app/js/main.js' -->
+    <g:javascript src="gumby/libs/jquery-1.10.1.min.js" />
+    <g:javascript src="gumby/libs/jquery-2.0.2.min.js" />
+    <g:javascript src="gumby/libs/gumby.js" />
+    <g:javascript src="gumby/libs/modernizr-2.6.2.min.js" />
+    <g:javascript src="gumby/libs/gumby.min.js" />
+    <g:javascript src="gumby/libs/gumby.init.js" />
+    <g:javascript src="gumby/main.js" />
+    
+    <g:javascript src="gumby/plugins.js" />
+
+    <g:javascript src="gumby/libs/ui/gumby.checkbox.js" />
+    <g:javascript src="gumby/libs/ui/gumby.fittext.js" />
+    <g:javascript src="gumby/libs/ui/gumby.fixed.js" />
+    <g:javascript src="gumby/libs/ui/gumby.navbar.js" />
+    <g:javascript src="gumby/libs/ui/gumby.radiobtn.js" />
+    <g:javascript src="gumby/libs/ui/gumby.retina.js" />
+    <g:javascript src="gumby/libs/ui/gumby.skiplink.js" />
+    <g:javascript src="gumby/libs/ui/gumby.tabs.js" />
+    <g:javascript src="gumby/libs/ui/gumby.toggleswitch.js" />
+    <g:javascript src="gumby/libs/ui/jquery.validation.js" />
+    <g:javascript src="gumby/libs/jquery.mobile.custom.min.js" />
+    
+    
        
-
+    <div class="pretty navbar unfixed" gumby-fixed="top" id="nav4">
+    <a class="toggle" gumby-trigger="#nav4 &gt; ul" href="#"><i class="icon-menu"></i></a>
+    <h1 class="four columns logo">
+      <a href="#">
+        <img src="img/gumby_mainlogo.png" gumby-retina="">
+      </a>
+    </h1>
+    <ul class="eight columns">
+      <li><g:link controller="customerAdm" action="index">Cliente</g:link></li>
+      <li>
+        <a href="#">Polizas</a>
+        <div class="dropdown">
+          <ul>
+            <li><g:link controller="policyAdm" action="lifeInsurance">Seguro de Vida</g:link></li>
+            <li><g:link controller="policyAdm" action="medicalInsurance">Gastos medicos</g:link></li>
+            <li><a href="#">Casa</a></li>
+            <li><a href="#">Auto</a></li>
+            <li><a href="#">otro</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">Catalogos</a>
+        <div class="dropdown">
+          <ul>
+            <li><g:link controller="companyTrade" action="list">Ramo</g:link></li>
+            <li><g:link controller="companyTradeProducts" action="list">Productos</g:link></li>
+            
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">Usuarios</a></li>
+    </ul>
+  </div>
 
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
+
 	<body>
+    <br/>
+    <br/>
+    <br/>
 
-		<div class="navbar">
-              <div class="navbar-inner">
-                <div class="container">
-                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </a>
-                  <label class="brand" >Administracion</label>
-                  <div class="nav-collapse collapse navbar-responsive-collapse">
-                    <ul class="nav">
-                      <li><g:link controller="Policy">Polizas</g:link>
-                      	<ul>
-                      		<g:link controller="Policy">Seguros de Vida</g:link></li>
-                      		<g:link controller="Policy">Gastos Medicos</g:link></li>
-                      		<g:link controller="Policy">Casa/Auto</g:link></li>
-                      	</ul>
-                      </li>
-                      <li><g:link controller="customerAdm">Clientes</g:link></li>
-                    </ul>
-                    <ul class="nav pull-right">
-                    
-                      
-                      
-                      <!--
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-wrench"></i>Configuración <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="catalogo.html">Catálogos</a></li>
-                          <li><a href="general.html">Configuración General</a></li>
-                          <li><a href='tickets.html'>Administración de Tickets</a></li>
-                          <li><a href='tickets.html'>Administración de Proveedores</a></li>
-                          <li><a href="roles.html">Configuración de Roles</a></li>
-                          <li><a href="servidor.html">Configuración del Servidor</a></li>
-                          <li class="divider"></li>
-                          <li><a href="otra.html">Otra Configuración</a></li>
-                        </ul>
-                      </li>
-                    -->
-                    </ul>
-                  </div><!-- /.nav-collapse -->
-                </div>
-              </div><!-- /navbar-inner -->
-            </div>
-
-
-
-
-		<nav:primary/>
-		<nav:secondary/>
 		<g:layoutBody/>
-		<div class="footer" role="contentinfo"></div>
-		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
-		<g:javascript library="application"/>
-		<r:layoutResources />
+
 	</body>
+
 </html>
