@@ -24,6 +24,7 @@ class Person {
 
 	static hasMany = [policyPayer:Policy, policyContractor:Policy,
 	                  insured:Insured,accounts:Account]
+	                  
 	static mappedBy = [policyPayer:"payer",policyContractor:"contractor"]
 
 

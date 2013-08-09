@@ -2,20 +2,20 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'accountNumber', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'accountNumber', 'error')} ">
 	<label for="accountNumber">
 		<g:message code="plannedRaw.accountNumber.label" default="Account Number" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="accountNumber" type="number" value="${plannedRawInstance.accountNumber}" required=""/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'annualiedPlannedRaw', 'error')} ">
-	<label for="annualiedPlannedRaw">
-		<g:message code="plannedRaw.annualiedPlannedRaw.label" default="Annualied Planned Raw" />
 		
 	</label>
-	<g:textField name="annualiedPlannedRaw" value="${plannedRawInstance?.annualiedPlannedRaw}"/>
+	<g:textField name="accountNumber" value="${plannedRawInstance?.accountNumber}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'annualiedPlannedRaw', 'error')} required">
+	<label for="annualiedPlannedRaw">
+		<g:message code="plannedRaw.annualiedPlannedRaw.label" default="Annualied Planned Raw" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="annualiedPlannedRaw" value="${fieldValue(bean: plannedRawInstance, field: 'annualiedPlannedRaw')}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'bank', 'error')} ">
@@ -75,11 +75,11 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'securityCode', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: plannedRawInstance, field: 'securityCode', 'error')} ">
 	<label for="securityCode">
 		<g:message code="plannedRaw.securityCode.label" default="Security Code" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="securityCode" type="number" value="${plannedRawInstance.securityCode}" required=""/>
+	<g:textField name="securityCode" value="${plannedRawInstance?.securityCode}"/>
 </div>
 

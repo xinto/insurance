@@ -2,8 +2,8 @@ package com.inovati.insurance
 
 class Payments {
 
-	Policy policy
-	Date date
+	Policy  policy
+	Date    date
 	Integer amount
 
     static constraints = {

@@ -1,8 +1,9 @@
 package com.inovati.insurance
 
 class Renewals {
+
 	Policy policy
-	Date date
+	Date   date
 
     static constraints = {
     	policy(nullable:false,blank:false)
