@@ -10,12 +10,20 @@
 	<g:select id="account" name="account.id" from="${com.inovati.insurance.Account.list()}" optionKey="id" required="" value="${accountInstance?.account?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'accountNumber', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'accountNumber', 'error')} ">
 	<label for="accountNumber">
 		<g:message code="account.accountNumber.label" default="Account Number" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="accountNumber" type="number" value="${accountInstance.accountNumber}" required=""/>
+	<g:textField name="accountNumber" value="${accountInstance?.accountNumber}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'active', 'error')} ">
+	<label for="active">
+		<g:message code="account.active.label" default="Active" />
+		
+	</label>
+	<g:checkBox name="active" value="${accountInstance?.active}" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'basicRaw', 'error')} ">
@@ -23,16 +31,7 @@
 		<g:message code="account.basicRaw.label" default="Basic Raw" />
 		
 	</label>
-	
-<ul class="one-to-many">
-<g:each in="${accountInstance?.basicRaw?}" var="b">
-    <li><g:link controller="basicRaw" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="basicRaw" action="create" params="['account.id': accountInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'basicRaw.label', default: 'BasicRaw')])}</g:link>
-</li>
-</ul>
-
+	<g:select name="basicRaw" from="${com.inovati.insurance.BasicRaw.list()}" multiple="multiple" optionKey="id" size="5" value="${accountInstance?.basicRaw*.id}" class="many-to-many"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'expiration', 'error')} required">
@@ -56,23 +55,14 @@
 		<g:message code="account.plannedRaw.label" default="Planned Raw" />
 		
 	</label>
-	
-<ul class="one-to-many">
-<g:each in="${accountInstance?.plannedRaw?}" var="p">
-    <li><g:link controller="plannedRaw" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
-</g:each>
-<li class="add">
-<g:link controller="plannedRaw" action="create" params="['account.id': accountInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'plannedRaw.label', default: 'PlannedRaw')])}</g:link>
-</li>
-</ul>
-
+	<g:select name="plannedRaw" from="${com.inovati.insurance.PlannedRaw.list()}" multiple="multiple" optionKey="id" size="5" value="${accountInstance?.plannedRaw*.id}" class="many-to-many"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'securityCode', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: accountInstance, field: 'securityCode', 'error')} ">
 	<label for="securityCode">
 		<g:message code="account.securityCode.label" default="Security Code" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:field name="securityCode" type="number" value="${accountInstance.securityCode}" required=""/>
+	<g:textField name="securityCode" value="${accountInstance?.securityCode}"/>
 </div>
 

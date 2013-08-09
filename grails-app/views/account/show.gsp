@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${accountInstance?.active}">
+				<li class="fieldcontain">
+					<span id="active-label" class="property-label"><g:message code="account.active.label" default="Active" /></span>
+					
+						<span class="property-value" aria-labelledby="active-label"><g:formatBoolean boolean="${accountInstance?.active}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${accountInstance?.basicRaw}">
 				<li class="fieldcontain">
 					<span id="basicRaw-label" class="property-label"><g:message code="account.basicRaw.label" default="Basic Raw" /></span>

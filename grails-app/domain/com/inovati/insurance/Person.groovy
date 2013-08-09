@@ -2,26 +2,28 @@ package com.inovati.insurance
 
 class Person {
 
-	String name
-	String secondName
-	String lastname
-	String secondLastname
-	Gender gender
+	String     name
+	String     secondName
+	String     lastname
+	String     secondLastname
+	Gender     gender
 	Profession profession
-	Date birthDate
-	Address personalAddress
-	String workCompanyName
-	Address workAddress
-	String telephone1
-	String telephone2
-	String email
-	String preferedName
-	String rfc
-	Boolean active
-	String isPayer
-	Boolean isContractor
+	Date       birthDate
+	Address    personalAddress
+	String     workCompanyName
+	Address    workAddress
+	String     telephone1
+	String     telephone2
+	String     email
+	String     preferedName
+	String     rfc
+	String     curp
+	Boolean    active
+	String     isPayer
+	Boolean    isContractor
 
-	static hasMany = [policyPayer:Policy, policyContractor:Policy,insured:Insured,accounts:Account]
+	static hasMany = [policyPayer:Policy, policyContractor:Policy,
+	                  insured:Insured,accounts:Account]
 	static mappedBy = [policyPayer:"payer",policyContractor:"contractor"]
 
 

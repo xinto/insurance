@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="accountNumber" title="${message(code: 'account.accountNumber.label', default: 'Account Number')}" />
 					
+						<g:sortableColumn property="active" title="${message(code: 'account.active.label', default: 'Active')}" />
+					
 						<g:sortableColumn property="expiration" title="${message(code: 'account.expiration.label', default: 'Expiration')}" />
 					
 						<th><g:message code="account.person.label" default="Person" /></th>
@@ -43,6 +45,8 @@
 						<td><g:link action="show" id="${accountInstance.id}">${fieldValue(bean: accountInstance, field: "account")}</g:link></td>
 					
 						<td>${fieldValue(bean: accountInstance, field: "accountNumber")}</td>
+					
+						<td><g:formatBoolean boolean="${accountInstance.active}" /></td>
 					
 						<td><g:formatDate date="${accountInstance.expiration}" /></td>
 					

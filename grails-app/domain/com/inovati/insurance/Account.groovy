@@ -2,11 +2,11 @@ package com.inovati.insurance
 
 class Account {
 
-	Person person
+	Person  person
     Account account
-    Integer accountNumber
-    Integer	securityCode
-    Date expiration
+    String  accountNumber
+    String	securityCode
+    Date    expiration
     Boolean active
 
 	static hasMany = [basicRaw:BasicRaw,plannedRaw:PlannedRaw]
