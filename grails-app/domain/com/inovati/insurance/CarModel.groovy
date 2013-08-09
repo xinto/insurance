@@ -3,7 +3,7 @@ package com.inovati.insurance
 class CarModel {
 
 	CarBrand carBrand
-	String name
+	String   name
 
 	static hasMany=[assuredCars:AssuredCar]
     

@@ -2,8 +2,9 @@ package com.inovati.insurance
 
 class InsuranceCompany {
 
-	String name;
-	String description;
+	String  name
+	String  description
+	Boolean active
 
 	static hasMany = [companyTradeProducts:CompanyTradeProducts]
 

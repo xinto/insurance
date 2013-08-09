@@ -2,8 +2,8 @@ package com.inovati.insurance
 
 class AssuredHouse {
 
-	Address address;
-	Integer estimatedValue;
+	Address address
+	Integer estimatedValue
 	
 
 	static hasMany = [policys:Policy]

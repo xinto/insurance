@@ -26,6 +26,8 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'insuranceCompany.name.label', default: 'Name')}" />
 					
+						<g:sortableColumn property="active" title="${message(code: 'insuranceCompany.active.label', default: 'Active')}" />
+					
 						<g:sortableColumn property="description" title="${message(code: 'insuranceCompany.description.label', default: 'Description')}" />
 					
 					</tr>
@@ -35,6 +37,8 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
 						<td><g:link action="show" id="${insuranceCompanyInstance.id}">${fieldValue(bean: insuranceCompanyInstance, field: "name")}</g:link></td>
+					
+						<td><g:formatBoolean boolean="${insuranceCompanyInstance.active}" /></td>
 					
 						<td>${fieldValue(bean: insuranceCompanyInstance, field: "description")}</td>
 					

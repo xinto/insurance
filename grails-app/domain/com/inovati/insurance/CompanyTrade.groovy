@@ -2,7 +2,7 @@ package com.inovati.insurance
 
 class CompanyTrade {
 
-	String name
+	String  name
 	Boolean active
 
     static hasMany = [companyTradeProducts:CompanyTradeProducts]

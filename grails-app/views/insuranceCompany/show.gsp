@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${insuranceCompanyInstance?.active}">
+				<li class="fieldcontain">
+					<span id="active-label" class="property-label"><g:message code="insuranceCompany.active.label" default="Active" /></span>
+					
+						<span class="property-value" aria-labelledby="active-label"><g:formatBoolean boolean="${insuranceCompanyInstance?.active}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${insuranceCompanyInstance?.companyTradeProducts}">
 				<li class="fieldcontain">
 					<span id="companyTradeProducts-label" class="property-label"><g:message code="insuranceCompany.companyTradeProducts.label" default="Company Trade Products" /></span>

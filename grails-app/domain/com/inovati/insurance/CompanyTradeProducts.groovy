@@ -2,8 +2,8 @@ package com.inovati.insurance
 
 class CompanyTradeProducts {
 
-	InsuranceCompany insuranceCompany
-	CompanyTrade companyTrade
+	InsuranceCompany     insuranceCompany
+	CompanyTrade         companyTrade
     ProductsProductTypes productsProductTypes
 
 	static hasMany = [policys:Policy]

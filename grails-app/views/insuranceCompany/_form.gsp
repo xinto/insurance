@@ -10,6 +10,14 @@
 	<g:textField name="name" required="" value="${insuranceCompanyInstance?.name}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: insuranceCompanyInstance, field: 'active', 'error')} ">
+	<label for="active">
+		<g:message code="insuranceCompany.active.label" default="Active" />
+		
+	</label>
+	<g:checkBox name="active" value="${insuranceCompanyInstance?.active}" />
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: insuranceCompanyInstance, field: 'companyTradeProducts', 'error')} ">
 	<label for="companyTradeProducts">
 		<g:message code="insuranceCompany.companyTradeProducts.label" default="Company Trade Products" />
