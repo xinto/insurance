@@ -15,7 +15,7 @@
 		<g:message code="assuredCar.estimatedValue.label" default="Estimated Value" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="estimatedValue" type="number" value="${assuredCarInstance.estimatedValue}" required=""/>
+	<g:field name="estimatedValue" value="${fieldValue(bean: assuredCarInstance, field: 'estimatedValue')}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: assuredCarInstance, field: 'carModel', 'error')} required">
@@ -34,14 +34,14 @@
 	<g:textField name="color" value="${assuredCarInstance?.color}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: assuredCarInstance, field: 'policys', 'error')} ">
-	<label for="policys">
-		<g:message code="assuredCar.policys.label" default="Policys" />
+<div class="fieldcontain ${hasErrors(bean: assuredCarInstance, field: 'policies', 'error')} ">
+	<label for="policies">
+		<g:message code="assuredCar.policies.label" default="Policies" />
 		
 	</label>
 	
 <ul class="one-to-many">
-<g:each in="${assuredCarInstance?.policys?}" var="p">
+<g:each in="${assuredCarInstance?.policies?}" var="p">
     <li><g:link controller="policy" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">

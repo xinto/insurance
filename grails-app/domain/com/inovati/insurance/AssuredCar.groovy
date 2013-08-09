@@ -2,13 +2,13 @@ package com.inovati.insurance
 
 class AssuredCar {
 
-	String plateNumber
-	Integer year
-	String color
+	String   plateNumber
+	Integer  year
+	String   color
 	CarModel carModel
-	Integer estimatedValue
+	Double   estimatedValue
 
-    static hasMany=[policys:Policy]
+    static hasMany=[policies:Policy]
     
     static constraints = {
     	plateNumber(nullable:false,blank:false)

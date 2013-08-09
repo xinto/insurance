@@ -59,12 +59,12 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${assuredCarInstance?.policys}">
+				<g:if test="${assuredCarInstance?.policies}">
 				<li class="fieldcontain">
-					<span id="policys-label" class="property-label"><g:message code="assuredCar.policys.label" default="Policys" /></span>
+					<span id="policies-label" class="property-label"><g:message code="assuredCar.policies.label" default="Policies" /></span>
 					
-						<g:each in="${assuredCarInstance.policys}" var="p">
-						<span class="property-value" aria-labelledby="policys-label"><g:link controller="policy" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
+						<g:each in="${assuredCarInstance.policies}" var="p">
+						<span class="property-value" aria-labelledby="policies-label"><g:link controller="policy" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

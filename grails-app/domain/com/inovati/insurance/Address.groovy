@@ -2,13 +2,13 @@ package com.inovati.insurance
 
 class Address {
 
-	String street
-	String number
-	String colony
+	String  street
+	String  number
+	String  colony
 	Integer postalCode
-	String city
-	String state
-	String delegation
+	String  city
+	String  state
+	String  delegation
 
 	static hasMany = [peopleWork:Person,peoplePersonal:Person,houses:AssuredHouse]
 	static mappedBy = [peopleWork:"workAddress",peoplePersonal:"personalAddress"]
