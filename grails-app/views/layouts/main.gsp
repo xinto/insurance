@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="${resource(dir: 'css/gumby', file: 'gumby.css')}" type="text/css">
     <link rel="stylesheet" href="${resource(dir: 'css/gumby', file: 'style.css')}" type="text/css">
+    <link rel="stylesheet" href="${resource(dir: 'css/gumby', file: 'jquery-ui.css')}" type="text/css">
 
     <!-- actually imports '/app/js/main.js' -->
     <g:javascript src="gumby/libs/jquery-1.10.1.min.js" />
@@ -16,9 +17,10 @@
     <g:javascript src="gumby/libs/modernizr-2.6.2.min.js" />
     <g:javascript src="gumby/libs/gumby.min.js" />
     <g:javascript src="gumby/libs/gumby.init.js" />
+
     <g:javascript src="gumby/main.js" />
-    
     <g:javascript src="gumby/plugins.js" />
+    <g:javascript src="gumby/jquery-ui.js" />
 
     <g:javascript src="gumby/libs/ui/gumby.checkbox.js" />
     <g:javascript src="gumby/libs/ui/gumby.fittext.js" />
@@ -31,20 +33,14 @@
     <g:javascript src="gumby/libs/ui/gumby.toggleswitch.js" />
     <g:javascript src="gumby/libs/ui/jquery.validation.js" />
     <g:javascript src="gumby/libs/jquery.mobile.custom.min.js" />
-    
-    
        
-    <div class="pretty navbar unfixed" gumby-fixed="top" id="nav4">
-    <a class="toggle" gumby-trigger="#nav4 &gt; ul" href="#"><i class="icon-menu"></i></a>
-    <h1 class="four columns logo">
-      <a href="#">
-        <img src="img/gumby_mainlogo.png" gumby-retina="">
-      </a>
-    </h1>
-    <ul class="eight columns">
+    <div class="pretty navbar unfixed" gumby-fixed="top" id="nav1">
+    <a class="toggle" gumby-trigger="#nav1 &gt; ul" href="#"><i class="icon-menu"></i></a>
+    
+    <ul class="eight columns" style="position: absolute;">
       <li><g:link controller="customerAdm" action="index">Cliente</g:link></li>
       <li>
-        <a href="#">Polizas</a>
+        <g:link controller="policyAdm" action="list">Polizas</g:link></a>
         <div class="dropdown">
           <ul>
             <li><g:link controller="policyAdm" action="lifeInsurance">Seguro de Vida</g:link></li>
@@ -67,6 +63,15 @@
       </li>
       <li><a href="#">Usuarios</a></li>
     </ul>
+
+    <ul style="position: relative; float: right; display: table;">
+      <h1 class="four columns logo" >
+        <a href="${createLink(uri: '/')}">
+          <img src="${createLinkTo(dir: 'img', file:'gumby_mainlogo.png')}" gumby-retina="">
+        </a>
+      </h1>
+    </ul>
+
   </div>
 
 		<g:layoutHead/>

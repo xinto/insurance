@@ -15,4 +15,8 @@ class PolicyAdmController {
     def carInsurance(){
     	
     }
+
+    def list(){
+    	
+    }
 }
