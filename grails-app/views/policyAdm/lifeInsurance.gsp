@@ -39,6 +39,16 @@
               </div> 
              
             </div>
+
+            <div class="three columns">
+                <label for="policy-payer">Cliente</label>
+                <div class="field">
+                  <div class="picker">
+                    <g:select name="policy-payer" from="${payersList}" value=""
+                    noSelection="['':'--']"/>
+                  </div>
+                </div>
+            </div>
       </div>
 
 

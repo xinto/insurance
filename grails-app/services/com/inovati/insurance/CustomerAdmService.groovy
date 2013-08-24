@@ -16,4 +16,8 @@ class CustomerAdmService {
     	payersList
     }
 
+    def getGenders(){
+        Gender.list()
+    }
+
 }

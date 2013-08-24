@@ -22,7 +22,7 @@
 				    <tbody>
 				        <tr>
 						    <td>Mes anterior</td>
-						    <td style="text-align:right;"><span class="secondary badge" style="font-size:25px;height:22px;">1</span></td>
+						    <td style="text-align:right;"><span class="secondary badge" style="font-size:20px;height:20px;">1</span></td>
 						</tr>
 					</tbody>
 				</table>
@@ -39,19 +39,19 @@
 				    <tbody>
 				        <tr>
 						    <td>Con 3 dias de prorroga</td>
-						    <td style="text-align:right;"><span class="danger badge" style="font-size:25px;height:22px;">1</span></td>
+						    <td style="text-align:right;"><span class="danger badge" style="font-size:20px;height:20px;">1</span></td>
 						</tr>
 						<tr>
 						    <td>Con 5 dias de prorroga</td>
-						    <td style="text-align:right;"><span class="danger badge" style="font-size:25px;height:22px;">3</span></td>
+						    <td style="text-align:right;"><span class="danger badge" style="font-size:20px;height:20px;">3</span></td>
 						</tr>
 						<tr>
 						    <td>Con 10 dias de prorroga</td>
-						    <td style="text-align:right;"><span class="warning badge" style="font-size:25px;height:22px;">2</span></td>
+						    <td style="text-align:right;"><span class="warning badge" style="font-size:20px;height:20px;">2</span></td>
 						</tr>
 						<tr>
 						    <td>Con 30 dias de prorroga</td>
-						    <td style="text-align:right;"><span class="secondary badge" style="font-size:25px;height:22px;">10</span></td>
+						    <td style="text-align:right;"><span class="secondary badge" style="font-size:20px;height:20px;">10</span></td>
 						</tr>
 						
 
@@ -70,19 +70,19 @@
 				    <tbody>
 				        <tr>
 						    <td>Del mes anterior</td>
-						    <td style="text-align:right;"><span class="secondary badge" style="font-size:25px;height:22px;">0</span></td>
+						    <td style="text-align:right;"><span class="secondary badge" style="font-size:20px;height:20px;">0</span></td>
 						</tr>
 						<tr>
 						    <td>En el mes actual </td>
-						    <td style="text-align:right;"><span class="danger badge" style="font-size:25px;height:22px;">5</span></td>
+						    <td style="text-align:right;"><span class="danger badge" style="font-size:20px;height:20px;">5</span></td>
 						</tr>
 						<tr>
 						    <td>Del siguiente mes</td>
-						    <td style="text-align:right;"><span class="warning badge" style="font-size:25px;height:22px;">12</span></td>
+						    <td style="text-align:right;"><span class="warning badge" style="font-size:20px;height:20px;">12</span></td>
 						</tr>
 						<tr>
 						    <td>Dentro de 2 meses</td>
-						    <td style="text-align:right;"><span class="secondary badge" style="font-size:25px;height:22px;">8</span></td>
+						    <td style="text-align:right;"><span class="secondary badge" style="font-size:20px;height:20px;">8</span></td>
 						</tr>
 						
 

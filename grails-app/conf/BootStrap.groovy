@@ -18,9 +18,9 @@ class BootStrap {
     }
 
     void createAdminUserIfRequired() {
-    	def paymentMethod = new PaymentMethod(name:"Debito").save()
     	def paymentMethod1 = new PaymentMethod(name:"Tarjeta de Credito").save()
     	def paymentMethod2 = new PaymentMethod(name:"Tarjeta de Debito").save()
+    	def paymentMethod3 = new PaymentMethod(name:"Efectivo").save()
     	def currency = new Currency(name: "Udis",
     							         description:"Moneda utilizada en el sector de seguros de vida").save()
     	def paymentForm = new PaymentForm(name:"Mensual").save()
@@ -36,9 +36,13 @@ class BootStrap {
 										 annualizedRaw: 1469.84,
 										 comissionRaw: 26.94).save()
 		def plannedRaw =	new PlannedRaw().save()
-		def contractorGender=new Gender(genderKey:"F",remark:"Femenino").save()
+		def contractorGender=new Gender(genderKey:"MUJER",remark:"Femenino").save()
+		def male = new Gender(genderKey:"HOMBRE",remark:"Masculino").save()
 		def profession =	new Profession(professionKey:"LAE",
-											remark:"Licenciado en Administracion de Empresas").save()
+										remark:"Licenciado en Administracion de Empresas").save()
+		def accounter =	new Profession(professionKey:"C",
+										remark:"Contador").save()
+		
 		def personalAddress=new Address(street:"Cacatuas",
 										number:"58",
 										colony:"Lomas de las Aguilas",

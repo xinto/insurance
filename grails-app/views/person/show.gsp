@@ -113,20 +113,29 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.telephone1}">
+				<g:if test="${personInstance?.personalPhone}">
 				<li class="fieldcontain">
-					<span id="telephone1-label" class="property-label"><g:message code="person.telephone1.label" default="Telephone1" /></span>
+					<span id="personalPhone-label" class="property-label"><g:message code="person.personalPhone.label" default="Personal Phone" /></span>
 					
-						<span class="property-value" aria-labelledby="telephone1-label"><g:fieldValue bean="${personInstance}" field="telephone1"/></span>
+						<span class="property-value" aria-labelledby="personalPhone-label"><g:fieldValue bean="${personInstance}" field="personalPhone"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${personInstance?.telephone2}">
+				<g:if test="${personInstance?.officePhone}">
 				<li class="fieldcontain">
-					<span id="telephone2-label" class="property-label"><g:message code="person.telephone2.label" default="Telephone2" /></span>
+					<span id="officePhone-label" class="property-label"><g:message code="person.officePhone.label" default="Office Phone" /></span>
 					
-						<span class="property-value" aria-labelledby="telephone2-label"><g:fieldValue bean="${personInstance}" field="telephone2"/></span>
+						<span class="property-value" aria-labelledby="officePhone-label"><g:fieldValue bean="${personInstance}" field="officePhone"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.cellphone}">
+				<li class="fieldcontain">
+					<span id="cellphone-label" class="property-label"><g:message code="person.cellphone.label" default="Cellphone" /></span>
+					
+						<span class="property-value" aria-labelledby="cellphone-label"><g:fieldValue bean="${personInstance}" field="cellphone"/></span>
 					
 				</li>
 				</g:if>
@@ -154,6 +163,15 @@
 					<span id="rfc-label" class="property-label"><g:message code="person.rfc.label" default="Rfc" /></span>
 					
 						<span class="property-value" aria-labelledby="rfc-label"><g:fieldValue bean="${personInstance}" field="rfc"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${personInstance?.curp}">
+				<li class="fieldcontain">
+					<span id="curp-label" class="property-label"><g:message code="person.curp.label" default="Curp" /></span>
+					
+						<span class="property-value" aria-labelledby="curp-label"><g:fieldValue bean="${personInstance}" field="curp"/></span>
 					
 				</li>
 				</g:if>
@@ -192,15 +210,6 @@
 						<g:each in="${personInstance.accounts}" var="a">
 						<span class="property-value" aria-labelledby="accounts-label"><g:link controller="account" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${personInstance?.curp}">
-				<li class="fieldcontain">
-					<span id="curp-label" class="property-label"><g:message code="person.curp.label" default="Curp" /></span>
-					
-						<span class="property-value" aria-labelledby="curp-label"><g:fieldValue bean="${personInstance}" field="curp"/></span>
 					
 				</li>
 				</g:if>

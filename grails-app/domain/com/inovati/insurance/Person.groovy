@@ -12,8 +12,9 @@ class Person {
 	Address    personalAddress
 	String     workCompanyName
 	Address    workAddress
-	String     telephone1
-	String     telephone2
+	String     personalPhone
+	String     officePhone
+	String     cellphone
 	String     email
 	String     preferedName
 	String     rfc
@@ -40,11 +41,13 @@ class Person {
 		personalAddress(nullable:true,blank:true)
 		workCompanyName(nullable:true,blank:true)
 		workAddress(nullable:true,blank:true)
-		telephone1(nullable:true,blank:true)
-		telephone2(nullable:true,blank:true)
+		personalPhone(nullable:true,blank:true)
+		officePhone(nullable:true,blank:true)
+		cellphone(nullable:true,blank:true)
 		email(nullable:true,blank:true)
 		preferedName(nullable:true,blank:true)
 		rfc(nullable:true,blank:true)
+		curp(nullable:true,blank:true)
 		active(nullable:true,blank:true)
 		isPayer(nullable:true,blank:true)
 		isContractor(nullable:true,blank:true)

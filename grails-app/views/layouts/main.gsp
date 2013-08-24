@@ -38,9 +38,18 @@
     <a class="toggle" gumby-trigger="#nav1 &gt; ul" href="#"><i class="icon-menu"></i></a>
     
     <ul class="eight columns" style="position: absolute;">
-      <li><g:link controller="customerAdm" action="index">Cliente</g:link></li>
       <li>
-        <g:link controller="policyAdm" action="list">Polizas</g:link></a>
+        <a href="#">Clientes</a>
+        <div class="dropdown">
+          <ul>
+            <li><g:link controller="customerAdm" action="index">lista</g:link></li>
+            <li><g:link controller="customerAdm" action="createPayer">Alta de Cliente</g:link></li>
+            
+          </ul>
+        </div>
+      </li>
+      <li>
+        <g:link controller="policyAdm" action="list">Pólizas</g:link></a>
         <div class="dropdown">
           <ul>
             <li><g:link controller="policyAdm" action="lifeInsurance">Seguro de Vida</g:link></li>
@@ -52,12 +61,13 @@
         </div>
       </li>
       <li>
-        <a href="#">Catalogos</a>
+        <a href="#">Catálogos</a>
         <div class="dropdown">
           <ul>
-            <li><g:link controller="companyTrade" action="list">Ramo</g:link></li>
+            <li><g:link controller="companyTrade" action="list">Ramos</g:link></li>
             <li><g:link controller="companyTradeProducts" action="list">Productos</g:link></li>
-            
+            <li><g:link controller="catalogsAdm" action="gendersList">Géneros</g:link></li>
+            <li><g:link controller="catalogsAdm" action="professionsList">Profesiones</g:link></li>
           </ul>
         </div>
       </li>

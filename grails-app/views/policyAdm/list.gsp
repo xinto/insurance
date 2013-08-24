@@ -14,7 +14,6 @@
 				       		<th>Asegurado Titular</th>
 				       		<th>Poliza </th>
 				       		<th>Producto</th>
-				       		<th>Ultimo pago </th>
 				       		<th>Forma de pago </th>
 				       		<th>Moneda</th>
 				       		<th>M.N.</th>
@@ -26,7 +25,6 @@
 						    <td>Carlos Cuaya</td>
 						    <td>161611616</td>
 						    <td>Seguro de Vida</td>
-						    <td>01/07/2013</td>
 						    <td>Mensual</td>
 						    <td>120 UDI</td>
 						    <td>150</td>

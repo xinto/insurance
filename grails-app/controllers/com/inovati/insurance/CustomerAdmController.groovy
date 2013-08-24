@@ -12,31 +12,20 @@ class CustomerAdmController {
             ExcelImporter importer = new ExcelImporter(fileName);
             
             def customerMapList = importer.getCustomer();
-            println "Out"
+
+            if(Person.list().size() == 2) {
+
             customerMapList.each { Map customerParams -> 
 
-            println "customerParams: { " + customerParams  + " } "
-
               def newCustomer = new Person(customerParams)
-               
-                //newCustomer.birthDate = new Date().parse("yyyy-MM-dd",customerParams.birthDate.toString())
-               /* 
-               String[] fullName
-               fullName = customerParams.name.split(" ")
-               newCustomer.lastname = fullName[0]
-               newCustomer.secondLastname = fullName[1]
-               newCustomer.name = fullName[2]
-               //newCustomer.secondName = fullName[3]
-               for(int i =3; i < fullName.length ; i++) {newCustomer.secondName = newCustomer.secondName + " "+ fullName[i]}
-              */
                 newCustomer.active = true
                 newCustomer.isContractor = false
                 
                   if (!newCustomer.save(flush: true)) {
                     println "Error in save"
                   }
-                println "customer_id: " + newCustomer.id
-         }
+            }
+          }
          }catch(Exception e){
             println "Error" + e.message
          }
@@ -59,6 +48,11 @@ class CustomerAdmController {
        
         
     }
+
+    def createPayer(){
+      def genders = customerAdmService.getGenders()
+      [genders:genders]
+    }   
 }
 
 

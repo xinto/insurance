@@ -82,20 +82,28 @@
 	<g:select id="workAddress" name="workAddress.id" from="${com.inovati.insurance.Address.list()}" optionKey="id" value="${personInstance?.workAddress?.id}" class="many-to-one" noSelection="['null': '']"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'telephone1', 'error')} ">
-	<label for="telephone1">
-		<g:message code="person.telephone1.label" default="Telephone1" />
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'personalPhone', 'error')} ">
+	<label for="personalPhone">
+		<g:message code="person.personalPhone.label" default="Personal Phone" />
 		
 	</label>
-	<g:textField name="telephone1" value="${personInstance?.telephone1}"/>
+	<g:textField name="personalPhone" value="${personInstance?.personalPhone}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'telephone2', 'error')} ">
-	<label for="telephone2">
-		<g:message code="person.telephone2.label" default="Telephone2" />
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'officePhone', 'error')} ">
+	<label for="officePhone">
+		<g:message code="person.officePhone.label" default="Office Phone" />
 		
 	</label>
-	<g:textField name="telephone2" value="${personInstance?.telephone2}"/>
+	<g:textField name="officePhone" value="${personInstance?.officePhone}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'cellphone', 'error')} ">
+	<label for="cellphone">
+		<g:message code="person.cellphone.label" default="Cellphone" />
+		
+	</label>
+	<g:textField name="cellphone" value="${personInstance?.cellphone}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'email', 'error')} ">
@@ -120,6 +128,14 @@
 		
 	</label>
 	<g:textField name="rfc" value="${personInstance?.rfc}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'curp', 'error')} ">
+	<label for="curp">
+		<g:message code="person.curp.label" default="Curp" />
+		
+	</label>
+	<g:textField name="curp" value="${personInstance?.curp}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'active', 'error')} ">
@@ -161,14 +177,6 @@
 </li>
 </ul>
 
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: personInstance, field: 'curp', 'error')} ">
-	<label for="curp">
-		<g:message code="person.curp.label" default="Curp" />
-		
-	</label>
-	<g:textField name="curp" value="${personInstance?.curp}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: personInstance, field: 'insured', 'error')} ">
