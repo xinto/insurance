@@ -7,4 +7,8 @@ class CatalogsService {
     def getGendersList() {
     	customerAdmService.getGenders()	
     }
+
+    def getProfessionsList() {
+    	customerAdmService.getProfessions()
+    }
 }

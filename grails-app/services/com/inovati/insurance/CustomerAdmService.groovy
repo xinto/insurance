@@ -20,4 +20,8 @@ class CustomerAdmService {
         Gender.list()
     }
 
+    def getProfessions(){
+        Profession.list()
+    }
+
 }

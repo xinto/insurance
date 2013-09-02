@@ -18,6 +18,7 @@ class CatalogsAdmController {
     }
 
     def professionsList(){
-
+        def professions = catalogsService.getProfessionsList()
+        [professionsList:professions]
     }
 }
