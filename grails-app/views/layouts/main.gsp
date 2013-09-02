@@ -89,9 +89,6 @@
 	</head>
 
 	<body>
-    <br/>
-    <br/>
-    <br/>
 
 		<g:layoutBody/>
 

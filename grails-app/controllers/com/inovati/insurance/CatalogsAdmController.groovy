@@ -8,6 +8,10 @@ class CatalogsAdmController {
     	
     }
 
+    def addGender(){
+        println "params: " + params
+    }
+
     def gendersList(){
     	def genders = catalogsService.getGendersList()
     	[gendersList:genders]
