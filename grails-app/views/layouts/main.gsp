@@ -42,7 +42,7 @@
         <a href="#">Clientes</a>
         <div class="dropdown">
           <ul>
-            <li><g:link controller="customerAdm" action="index">lista</g:link></li>
+            <li><g:link controller="customerAdm" action="index">Lista de Clientes</g:link></li>
             <li><g:link controller="customerAdm" action="createPayer">Alta de Cliente</g:link></li>
             
           </ul>
