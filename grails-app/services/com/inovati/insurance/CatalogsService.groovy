@@ -11,4 +11,8 @@ class CatalogsService {
     def getProfessionsList() {
     	customerAdmService.getProfessions()
     }
+
+    def getCompanyList(){
+    	customerAdmService.getCompany()
+    }
 }

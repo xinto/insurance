@@ -21,4 +21,9 @@ class CatalogsAdmController {
         def professions = catalogsService.getProfessionsList()
         [professionsList:professions]
     }
+
+    def companyList(){
+        def company = catalogsService.getCompanyList()
+        [companyList: company]
+    }
 }

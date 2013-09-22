@@ -68,6 +68,7 @@
             <li><g:link controller="companyTradeProducts" action="list">Productos</g:link></li>
             <li><g:link controller="catalogsAdm" action="gendersList">Géneros</g:link></li>
             <li><g:link controller="catalogsAdm" action="professionsList">Profesiones</g:link></li>
+            <li><g:link controller="catalogsAdm" action="companyList">Empresas</g:link></li>
           </ul>
         </div>
       </li>

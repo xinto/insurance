@@ -24,4 +24,8 @@ class CustomerAdmService {
         Profession.list()
     }
 
+    def getCompany(){
+        InsuranceCompany.list()
+    }
+
 }

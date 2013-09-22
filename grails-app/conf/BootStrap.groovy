@@ -79,6 +79,34 @@ class BootStrap {
 										workAddress:workAddress,
 										telephone1:"(55) 5635-7780",
 										telephone2:"").save()
+
+		def smnyl = 		new InsuranceCompany(name:"SMNYL",
+										description:"S",
+										active:true).save()
+		def  gnp= 		new InsuranceCompany(name:"GNP",
+										description:"GNP",
+										active:true).save()
+		def mapfre = 		new InsuranceCompany(name:"MAPFRE TEPEYAC",
+										description:"MAPFRE TEPEYAC",
+										active:true).save()
+        def qualitas = 		new InsuranceCompany(name:"QUALITAS",
+										description:"QUALITAS",
+										active:true).save()
+    	def aig = 		new InsuranceCompany(name:"AIG",
+										description:"AIG",
+										active:true).save()
+		def ace = 		new InsuranceCompany(name:"ACE",
+										description:"ACE",
+										active:true).save()
+		def metlife = 		new InsuranceCompany(name:"METLIFE",
+										description:"METLIFE",
+										active:true).save()
+		def axa = 		new InsuranceCompany(name:"AXA",
+										description:"AXA",
+										active:true).save()
+		def amedex = 		new InsuranceCompany(name:"AMEDEX",
+										description:"AMEDEX",
+										active:true).save()
 		/*def policy = 		new Policy( basicRaw:basicRaw,
 										plannedRaw:plannedRaw,
 										contractor:contractor,
