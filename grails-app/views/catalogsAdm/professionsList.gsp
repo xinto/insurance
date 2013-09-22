@@ -41,8 +41,17 @@
 	</head>
 	<body>
 
-		<div class="wrapper shaded">
-        	<h4><label style="font-weight: bold;">Catálogo de Profesiones</label></h4>
+    	<div class="wrapper shaded">
+			<div class="row topspace">
+				<div class="ten columns">
+					<h4>
+						<label style="font-weight: bold;">Catálogo de Profesiones</label>
+					</h4>
+	        	</div>
+	        	<div class="two columns pull_right">
+	        		<div class="btn primary medium"><a href="#" class="switch" gumby-trigger="#new-gender-modal">Nuevo</a></div>
+	        	</div>
+        	</div>
     	</div>
 		
 		<div class="wrapper nopad">

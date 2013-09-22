@@ -41,7 +41,7 @@
 	<body>
 
 		<div class="wrapper shaded">
-			<div class="row xinto">
+			<div class="row topspace">
 				<div class="ten columns">
 					<h4>
 	        			<label style="font-weight: bold;">Catálogo de generos</label>
