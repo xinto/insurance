@@ -44,7 +44,7 @@
 			<div class="row topspace">
 				<div class="ten columns">
 					<h4>
-	        			<label style="font-weight: bold;">Catálogo de generos</label>
+	        			<label style="font-weight: bold;">Catálogo de Géneros</label>
 	        		</h4>
 	        	</div>
 	        	<div class="two columns pull_right">
@@ -52,7 +52,7 @@
 	        	</div>
         	</div>
     	</div>
-		
+
 		<div class="wrapper nopad">
 			<div class="row">
 			<table class="striped rounded">
@@ -70,7 +70,7 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}" id ="gid${genderInstance.id}">
 					
 						<td>
-							<a href="#" class="switch" gumby-trigger="#modal1" onclick="fillModal(event,this,${genderInstance.id})"> ${fieldValue(bean: genderInstance, field: "genderKey")}
+							<a href="#" class="switch" gumby-trigger="#updating-gender" onclick="fillModal(event,this,${genderInstance.id})"> ${fieldValue(bean: genderInstance, field: "genderKey")}
 							</a>
 						</td>
 					
@@ -83,9 +83,9 @@
 			</div>
 		</div>
 
-		<div class="modal" id="modal1">
+		<div class="modal" id="updating-gender">
 		    <div class="content">
-		        <a class="close switch" gumby-trigger="|#modal1"><i class="icon-cancel" /></i></a>
+		        <a class="close switch" gumby-trigger="|#updating-gender"><i class="icon-cancel" /></i></a>
 			<div class="row">
 			    <div class="eleven columns ">
 
@@ -112,7 +112,7 @@
 			<div class="row">
 				<div class="three columns centered text-center">
 	                <p class="btn primary medium">
-	                    <a href="#" class="switch" gumby-trigger="|#modal1">Actualizar</a>
+	                    <a href="#" class="switch" gumby-trigger="|#updating-gender">Actualizar</a>
 	                </p>
 	            </div>  
 	        </div>
@@ -122,36 +122,38 @@
 		<div class="modal" id="new-gender-modal">
 		    <div class="content">
 		        <a class="close switch" gumby-trigger="|#new-gender-modal"><i class="icon-cancel" /></i></a>
-			<div class="row">
-			    <div class="eleven columns ">
-
-			        <h3>Nuevo</h3>
-		            <br/>
-	                <div class="five columns">
-		              <label for="gender-name">Género</label>
-		              <div class="field">
-		                <input id="gender-name" class="text input" name="gender-name" type="text" placeholder="Género"  >
-		              </div>
-		            </div>
-		            
-		            <div class="six columns">
-		              <label for="gender-remark">Descripción</label>
-		              <div class="field">
-		                <input id="gender-remark" class="text input" name="gender-remark" type="text" placeholder="Descripción">
-		              </div> 
-		            </div>
-						
+		        <form name="myForm" id="myForm" controller="customerAdm" action="addGender" method="post">
+				<div class="row">
+				    <div class="eleven columns ">
+				    	
+				        <h3>Nuevo</h3>
+			            <br/>
+		                <div class="five columns">
+			              <label for="n-gender-name">Género</label>
+			              <div class="field">
+			                <input id="n-gender-name" class="text input" name="n-gender-name" type="text" placeholder="Género"  >
+			              </div>
+			            </div>
+			            
+			            <div class="six columns">
+			              <label for="n-gender-remark">Descripción</label>
+			              <div class="field">
+			                <input id="n-gender-remark" class="text input" name="n-gender-remark" type="text" placeholder="Descripción">
+			              </div> 
+			            </div>
+							
+			        </div>
+				</div>
+				<br/>
+				<br/>
+				<div class="row">
+					<div class="three columns centered text-center">
+		                <p class="btn primary medium">
+		                    <input type="submit" value="Submit">
+		                </p>
+		            </div>  
 		        </div>
-			</div>
-			<br/>
-			<br/>
-			<div class="row">
-				<div class="three columns centered text-center">
-	                <p class="btn primary medium">
-	                    <g:link controller="catalogsAdm" action="addGender">Agregar</g:link>
-	                </p>
-	            </div>  
-	        </div>
+		        </form>
 		    </div>
 		</div>
 
