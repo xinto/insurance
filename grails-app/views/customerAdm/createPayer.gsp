@@ -11,8 +11,15 @@
 
 	<body>
 
-		<div class="wrapper shaded">
-        	<h4><label style="font-weight: bold;">Alta de cliente</h4>
+    	<div class="wrapper shaded">
+			<div class="row topspace">
+				<div class="ten columns">
+					<h4>
+						<label style="font-weight: bold;">Alta de cliente</label>
+					</h4>
+	        	</div>
+	        	
+        	</div>
     	</div>
 
 		<div class="row">
