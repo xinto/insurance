@@ -9,13 +9,20 @@ class CatalogsAdmController {
     }
 
     def addGender(){
-        println "it is heree!!"
+        
         println "params: " + params
+        def genderInstance 
+        try {
+            genderInstance = catalogsService.createNewGender(params)
+        }
+        catch(Exception e) {
+            
+        }
+        
         redirect(action: "gendersList")
     }
 
     def gendersList(){
-        println "it is heree!! in list"
     	def genders = catalogsService.getGendersList()
     	[gendersList:genders]
     }

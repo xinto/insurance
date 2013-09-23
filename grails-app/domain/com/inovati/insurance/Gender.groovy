@@ -8,7 +8,7 @@ class Gender {
 
     static constraints = {
     	genderKey(nullable:false,blank:false)
-    	remark()
+    	remark(nullable:true,blank:true)
     }
 
     static hasMany = [people:Person]
