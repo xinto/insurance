@@ -14,6 +14,12 @@ class CatalogsAdmController {
         redirect(action: "gendersList")
     }
 
+    def addCompany(){
+        println "it is heree company!!"
+        println "params: " + params
+        redirect(action: "companyList")
+    }
+
     def gendersList(){
         println "it is heree!! in list"
     	def genders = catalogsService.getGendersList()
