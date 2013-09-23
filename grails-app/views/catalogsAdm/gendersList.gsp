@@ -122,7 +122,7 @@
 		<div class="modal" id="new-gender-modal">
 		    <div class="content">
 		        <a class="close switch" gumby-trigger="|#new-gender-modal"><i class="icon-cancel" /></i></a>
-		        <form name="myForm" id="myForm" controller="customerAdm" action="addGender" method="post">
+		        <form controller="customerAdm" action="addGender" method="post">
 				<div class="row">
 				    <div class="eleven columns ">
 				    	
@@ -149,7 +149,7 @@
 				<div class="row">
 					<div class="three columns centered text-center">
 		                <p class="btn primary medium">
-		                    <input type="submit" value="Submit">
+		                    <input type="submit" value="Crear">
 		                </p>
 		            </div>  
 		        </div>
