@@ -63,7 +63,7 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'company.companyKey.label', default: 'Company Key')}" />
 					
-						<g:sortableColumn property="descripction" title="${message(code: 'company.description.label', default: 'Description')}" />
+						<g:sortableColumn property="description" title="${message(code: 'company.description.label', default: 'Description')}" />
 
 						<g:sortableColumn property="active" title="${message(code: 'company.active.label', default: 'Active')}" />
 					
@@ -134,29 +134,30 @@
 		<div class="modal" id="new-company-modal">
 		    <div class="content">
 		        <a class="close switch" gumby-trigger="|#new-company-modal"><i class="icon-cancel" /></i></a>
+		        <form controller="customerAdm" action="addCompany" method="post">
 			<div class="row">
 			    <div class="eleven columns ">
 
 			        <h3>Nuevo</h3>
 		            <br/>
 	                <div class="five columns">
-		              <label for="company-name">Nombre</label>
+		              <label for="name">Nombre</label>
 		              <div class="field">
-		                <input id="company-name" class="text input" name="company-name" type="text" placeholder="Nombre"  >
+		                <input id="name" class="text input" name="name" type="text" placeholder="Nombre"  >
 		              </div>
 		            </div>
 		            
 		            <div class="six columns">
-		              <label for="company-description">Descripción</label>
+		              <label for="description">Descripción</label>
 		              <div class="field">
-		                <input id="company-description" class="text input" name="company-description" type="text" placeholder="Descripción">
+		                <input id="description" class="text input" name="description" type="text" placeholder="Descripción">
 		              </div
 		            </div>
 
 		            <div class="seven columns">
-		              <label for="company-active">Estatus</label>
+		              <label for="active">Estatus</label>
 		              <div class="field">
-		                <input id="company-active" class="text input" name="company-active" type="text" placeholder="Estatus">
+		                <input id="active" class="text input" name="active" type="text" placeholder="Estatus">
 		              </div> 
 		            </div>		            
 						
@@ -167,7 +168,7 @@
 			<div class="row">
 				<div class="three columns centered text-center">
 	                <p class="btn primary medium">
-	                    <g:link controller="catalogsAdm" action="addCompany">Agregar</g:link>
+	                    <input type="submit" value="Crear">
 	                </p>
 	            </div>  
 	        </div>

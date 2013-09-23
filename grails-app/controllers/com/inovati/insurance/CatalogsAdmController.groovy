@@ -23,8 +23,15 @@ class CatalogsAdmController {
     }
 
     def addCompany(){
-        println "it is heree company!!"
         println "params: " + params
+        def companyInstance 
+        try {
+            companyInstance = catalogsService.createNewCompany(params)
+        }
+        catch(Exception e) {
+            
+        }
+        
         redirect(action: "companyList")
     }
 

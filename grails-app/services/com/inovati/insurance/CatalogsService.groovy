@@ -24,4 +24,13 @@ class CatalogsService {
         }
         genderInstance
     }
+
+    def createNewCompany(def params){
+
+        def companyInstance = new InsuranceCompany(params)
+        if (!companyInstance.save(flush: true)) {
+            throw new RuntimeException("Error al crear nueva Company")
+        }
+        companyInstance
+    }
 }
