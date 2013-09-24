@@ -41,8 +41,8 @@
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
                <td>${fieldValue(bean: payer, field: "id")}</td>
                <td>${fieldValue(bean: payer, field: "isPayer")}</td>
-               <td>${fieldValue(bean: payer, field: "name")}</td>
-               <td>${fieldValue(bean: payer, field: "secondName")}</td>
+               <td style="width: 100px;">${fieldValue(bean: payer, field: "name")}</td>
+               <td style="width: 80px;">${fieldValue(bean: payer, field: "secondName")}</td>
                <td>${fieldValue(bean: payer, field: "lastname")}</td>
                <td>${fieldValue(bean: payer, field: "secondLastname")}</td>
             </tr>

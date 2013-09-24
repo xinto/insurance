@@ -3,7 +3,6 @@
 		<meta name="layout" content="main"/>
 		<script type="text/javascript">
              $(document).ready(function() {
-                $("#payer-birthday").datepicker({dateFormat: 'dd/mm/yy'});
                 $("#birthdate").datepicker({dateFormat: 'dd/mm/yy'});
              })
         </script>
@@ -28,73 +27,76 @@
       			<div class="errors" role="status">${flash.errors}</div>
 			</div>
 		</div>
+<form class="form-horizontal" controller="customerAdm" action="addNewPayer" method="post">
+		<div class="row">
+			<div class="three columns">
+              <label for="folio">Folio</label>
+              <div class="field">
+                <input id="folio" class="text input" name="isPayer" type="text" placeholder="Folio"  >
+              </div>
+            </div>
+		</div>
 
 		<div class="row">
 			<div class="three columns">
-              <label for="payer-name">Nombre</label>
+              <label for="name">Nombre</label>
               <div class="field">
-                <input id="payer-name" class="text input" name="payer-name" type="text" placeholder="Nombre"  >
+                <input id="name" class="text input" name="name" type="text" placeholder="Nombre"  >
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-second-name">Segundo Nombre</label>
+              <label for="secondName">Segundo Nombre</label>
               <div class="field">
-                <input id="payer-second-name" class="text input" name="payer-second-name" type="text" placeholder="Segundo Nombre">
+                <input id="secondName" class="text input" name="secondName" type="text" placeholder="Segundo Nombre">
               </div> 
             </div>
 
             <div class="three columns">
-              <label for="payer-lastname">Apellido Paterno</label>
+              <label for="lastname">Apellido Paterno</label>
               <div class="field">
-                <input id="payer-lastname" class="text input" name="payer-lastname" type="text" placeholder="Apellido Paterno"  >
+                <input id="lastname" class="text input" name="lastname" type="text" placeholder="Apellido Paterno"  >
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-second-lastname">Apellido Materno</label>
+              <label for="secondLastname">Apellido Materno</label>
               <div class="field">
-                <input id="payer-second-lastname" class="text input" name="payer-second-lastname" type="text" placeholder="Apellido Materno">
+                <input id="secondLastname" class="text input" name="secondLastname" type="text" placeholder="Apellido Materno">
               </div> 
             </div>
 		</div>
 
 		<div class="row">
 			<div class="three columns">
-              <label for="payer-prefered-name">Nombre Preferido</label>
+              <label for="preferedName">Nombre Preferido</label>
               <div class="field">
-                <input id="payer-prefered-name" class="text input" name="payer-prefered-name" type="text" placeholder="Nombre Preferido"  >
+                <input id="preferedName" class="text input" name="preferedName" type="text" placeholder="Nombre Preferido"  >
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-birthday">Fecha de Nacimiento</label>
+              <label for="birthdate">Fecha de Nacimiento</label>
               <div class="field">
-                <input id="payer-birthday" class="text input" name="payer-birthday" type="text" placeholder="Fecha de Nacimiento">
+                <input id="birthdate" class="text input" name="birthdate" type="text" placeholder="Fecha de Nacimiento">
               </div> 
             </div>
 
             <div class="three columns">
-              <label for="payer-gender">Sexo</label>
+              <label for="gender">Sexo</label>
               <div class="field">
                 <div class="picker">
-                    <g:select name="payer-gender" from="${genders}" value=""
-          noSelection="['':'--']"/>
+                    <g:select optionKey="id" name="gender.id" from="${genders}" noSelection="['':'--']"/>
 
                   </div>
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-profession">Profesión</label>
+              <label for="profession">Profesión</label>
               <div class="field">
                 <div class="picker">
-                    <select name="payer-profession">
-                      <option value="#">--</option>
-                      <option>CONTADOR</option>
-                      <option>LICENCIADO</option>
-                      <option>INGENIERO</option>
-                    </select>
+                   <g:select optionKey="id" name="profession.id" from="${professions}" noSelection="['':'--']"/>
                   </div>
               </div> 
             </div>
@@ -102,30 +104,30 @@
 
 		<div class="row">
 			<div class="three columns">
-              <label for="payer-personal-phone">Tel. Personal</label>
+              <label for="personalPhone">Tel. Personal</label>
               <div class="field">
-                <input id="payer-personal-phone" class="text input" name="payer-personal-phone" type="text" placeholder="Tel. Personal"  >
+                <input id="personalPhone" class="text input" name="personalPhone" type="text" placeholder="Tel. Personal"  >
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-office-phone">Tel. Oficina</label>
+              <label for="officePhone">Tel. Oficina</label>
               <div class="field">
-                <input id="payer-office-phone" class="text input" name="payer-office-phone" type="text" placeholder="Tel. Oficina">
+                <input id="officePhone" class="text input" name="officePhone" type="text" placeholder="Tel. Oficina">
               </div> 
             </div>
 
             <div class="three columns">
-              <label for="payer-cellphone">Tel. Celular</label>
+              <label for="cellphone">Tel. Celular</label>
               <div class="field">
-                <input id="payer-cellphone" class="text input" name="payer-cellphone" type="text" placeholder="Tel. Celular"  >
+                <input id="cellphone" class="text input" name="cellphone" type="text" placeholder="Tel. Celular"  >
               </div>
             </div>
             
             <div class="three columns">
-              <label for="payer-email">Email</label>
+              <label for="email">Email</label>
               <div class="field">
-                <input id="payer-email" class="text input" name="payer-email" type="text" placeholder="Email">
+                <input id="email" class="text input" name="email" type="text" placeholder="Email">
               </div> 
             </div>
             
@@ -134,16 +136,16 @@
 		<div class="row">
 
 			<div class="six columns">
-              <label for="payer-rfc">RFC</label>
+              <label for="rfc">RFC</label>
               <div class="field">
-                <input id="payer-rfc" class="text input" name="payer-rfc" type="text" placeholder="RFC"  >
+                <input id="rfc" class="text input" name="rfc" type="text" placeholder="RFC"  >
               </div>
             </div>
             
             <div class="six columns">
-              <label for="payer-curp">CURP</label>
+              <label for="curp">CURP</label>
               <div class="field">
-                <input id="payer-curp" class="text input" name="payer-curp" type="text" placeholder="CURP">
+                <input id="curp" class="text input" name="curp" type="text" placeholder="CURP">
               </div> 
             </div>
 
@@ -280,10 +282,11 @@
 		<div class="row">
 			<div class="push_five two columns">
 		      <p class="pretty medium warning btn" style="margin-left: 30px;">
-				  <a href="#">Guardar</a>
+				  <input type="submit" value="Guardar">
 				</p>
 		    </div>
 		</div>
+	</form>
 	</body>
 
 </html>

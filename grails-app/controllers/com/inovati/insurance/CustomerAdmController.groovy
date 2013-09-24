@@ -17,13 +17,73 @@ class CustomerAdmController {
 
             customerMapList.each { Map customerParams -> 
 
-              def newCustomer = new Person(customerParams)
-                newCustomer.active = true
-                newCustomer.isContractor = false
-                
-                  if (!newCustomer.save(flush: true)) {
-                    println "Error in save"
-                  }
+              //println "customerParams" + customerParams
+
+              def name = customerParams.name
+              def names = name.split("/") // split() uses regEx's, so you need to escape chars such as a "." -> "\\."
+
+              names.each{
+             //   println "customerName: " + it
+                def customerName = it.trim().split(" ")
+             //   println "customerName size: " + customerName.size()
+
+                switch(customerName.size()) {
+                  case 1:
+                          def newCustomer = new Person([name:it,isPayer:customerParams.isPayer])
+                          newCustomer.active = true
+                          newCustomer.isContractor = false
+                          
+                          if (!newCustomer.save(flush: true)) {
+                            println "Error in save"
+                          }
+                    
+                  break
+                  case 2:
+
+                          def newCustomer = new Person([name:customerName[0],lastname:customerName[1],isPayer:customerParams.isPayer])
+                          newCustomer.active = true
+                          newCustomer.isContractor = false
+                          
+                          if (!newCustomer.save(flush: true)) {
+                            println "Error in save"
+                          }
+                    
+                  break
+                  case 3:
+                        def newCustomer = new Person([lastname:customerName[0],secondLastname:customerName[1],name:customerName[2],isPayer:customerParams.isPayer])
+                          newCustomer.active = true
+                          newCustomer.isContractor = false
+                          
+                          if (!newCustomer.save(flush: true)) {
+                            println "Error in save"
+                          }
+                    
+                  break
+                  case 4:
+
+                        def newCustomer = new Person([lastname:customerName[0],secondLastname:customerName[1],name:customerName[2],secondName:customerName[3],isPayer:customerParams.isPayer])
+                          newCustomer.active = true
+                          newCustomer.isContractor = false
+                          
+                          if (!newCustomer.save(flush: true)) {
+                            println "Error in save"
+                          }
+                    
+                  break
+                  default:
+
+                          def newCustomer = new Person([name:it,isPayer:customerParams.isPayer])
+                          newCustomer.active = true
+                          newCustomer.isContractor = false
+                          
+                          if (!newCustomer.save(flush: true)) {
+                            println "Error in save"
+                          }
+                    
+                  break
+                }
+
+              }
             }
           }
          }catch(Exception e){
@@ -36,7 +96,7 @@ class CustomerAdmController {
     def addNewPayer(){
 
     	customerAdmService.addNewPayer(params)
-    	
+    	redirect(action:"customersList")
     }
 
     def customersList(){
@@ -51,7 +111,8 @@ class CustomerAdmController {
 
     def createPayer(){
       def genders = customerAdmService.getGenders()
-      [genders:genders]
+      def professions = customerAdmService.getProfessions()
+      [genders:genders,professions:professions]
     }   
 }
 

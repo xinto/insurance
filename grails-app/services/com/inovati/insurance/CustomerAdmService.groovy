@@ -7,8 +7,15 @@ class CustomerAdmService {
     }
 
     def addNewPayer(def params){
-    	def person = new Person()
-    	
+        println "params" + params
+
+    	def person = new Person(params)
+        person.active  = true
+        person.birthDate = new Date().parse("dd/M/yyyy",params.birthdate)
+        if (!person.save(flush: true)) {
+            throw new RuntimeException("Error al crear un nuevo cliente")
+        }
+        person
     }
 
     def getPayers() {

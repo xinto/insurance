@@ -9,7 +9,7 @@ class PolicyAdmController {
     def lifeInsurance(){
 
     def payersList = customerAdmService.getPayers()
-    println "payersList: " + payersList
+    //println "payersList: " + payersList
     [payersList:payersList]
     }
 
