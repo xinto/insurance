@@ -1,4 +1,3 @@
-
 <%@ page import="com.inovati.insurance.CompanyTrade" %>
 <!doctype html>
 <html>

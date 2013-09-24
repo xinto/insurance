@@ -16,6 +16,10 @@ class CatalogsService {
     	customerAdmService.getCompany()
     }
 
+    def getCompanyTradeList(){
+        customerAdmService.getCompanyTrade()
+    }
+
     def createNewGender(def params){
 
     	def genderInstance = new Gender(params)
@@ -32,5 +36,14 @@ class CatalogsService {
             throw new RuntimeException("Error al crear nueva Company")
         }
         companyInstance
+    }
+
+    def createNewCompanyTrade(def params){
+
+        def companyTradeInstance = new CompanyTrade(params)
+        if (!companyTradeInstance.save(flush: true)) {
+            throw new RuntimeException("Error al crear nuevo Ramo")
+        }
+        companyTradeInstance
     }
 }
