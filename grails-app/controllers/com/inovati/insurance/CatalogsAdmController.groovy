@@ -35,6 +35,19 @@ class CatalogsAdmController {
         redirect(action: "companyList")
     }
 
+    def addCompanyTrade(){
+        println "params: " + params
+        def companyTradeInstance 
+        try {
+            companyTradeInstance = catalogsService.createNewCompanyTrade(params)
+        }
+        catch(Exception e) {
+            
+        }
+        
+        redirect(action: "companyTradeList")
+    }
+
     def gendersList(){
     	def genders = catalogsService.getGendersList()
     	[gendersList:genders]
@@ -49,4 +62,10 @@ class CatalogsAdmController {
         def company = catalogsService.getCompanyList()
         [companyList: company]
     }
+
+    def companyTradeList(){
+        println "paramsTradeListhdjfahdkf: " 
+        def companyTrade = catalogsService.getCompanyTradeList()
+        [companyTradeList: companyTrade]
+    }  
 }

@@ -35,4 +35,8 @@ class CustomerAdmService {
         InsuranceCompany.list()
     }
 
+    def getCompanyTrade(){
+        CompanyTrade.list()
+    }
+
 }

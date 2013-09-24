@@ -83,7 +83,7 @@ class BootStrap {
 		def smnyl = 		new InsuranceCompany(name:"SMNYL",
 										description:"S",
 										active:true).save()
-		def  gnp= 		new InsuranceCompany(name:"GNP",
+		def  gnp= 			new InsuranceCompany(name:"GNP",
 										description:"GNP",
 										active:true).save()
 		def mapfre = 		new InsuranceCompany(name:"MAPFRE TEPEYAC",
@@ -92,20 +92,34 @@ class BootStrap {
         def qualitas = 		new InsuranceCompany(name:"QUALITAS",
 										description:"QUALITAS",
 										active:true).save()
-    	def aig = 		new InsuranceCompany(name:"AIG",
+    	def aig = 			new InsuranceCompany(name:"AIG",
 										description:"AIG",
 										active:true).save()
-		def ace = 		new InsuranceCompany(name:"ACE",
+		def ace = 			new InsuranceCompany(name:"ACE",
 										description:"ACE",
 										active:true).save()
 		def metlife = 		new InsuranceCompany(name:"METLIFE",
 										description:"METLIFE",
 										active:true).save()
-		def axa = 		new InsuranceCompany(name:"AXA",
+		def axa = 			new InsuranceCompany(name:"AXA",
 										description:"AXA",
 										active:true).save()
 		def amedex = 		new InsuranceCompany(name:"AMEDEX",
 										description:"AMEDEX",
+										active:true).save()
+		def vida =			new CompanyTrade(name:"VIDA",
+										active:true).save()
+		def gmm =			new CompanyTrade(name:"GMM",
+										active:true).save()
+		def acc =			new CompanyTrade(name:"ACC. PERSONALES",
+										active:true).save()
+		def autos =			new CompanyTrade(name:"AUTOS",
+										active:true).save()
+		def hogar =			new CompanyTrade(name:"HOGAR",
+										active:true).save()
+		def empresarial =	new CompanyTrade(name:"EMPRESARIAL",
+										active:true).save()
+		def civil =			new CompanyTrade(name:"RESPONSABILIDAD CIVIL",
 										active:true).save()
 		/*def policy = 		new Policy( basicRaw:basicRaw,
 										plannedRaw:plannedRaw,

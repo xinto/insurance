@@ -9,6 +9,7 @@ class CompanyTrade {
 
     static constraints = {
     	name(nullable:false,blank:false)
+    	active(nullable:false,blank:false)
     }
 
     String toString(){
