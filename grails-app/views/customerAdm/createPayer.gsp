@@ -170,21 +170,21 @@
 				    <div class="six columns">
 		              <label for="personal-street">Calle</label>
 		              <div class="field">
-		                <input id="personal-street" class="text input" name="personal-street" type="text" placeholder="Calle"  >
+		                <input id="personal-street" class="text input" name="personalStreet" type="text" placeholder="Calle"  >
 		              </div>
 		            </div>
 		            
 		            <div class="four columns">
 		              <label for="personal-settlement">Colonia</label>
 		              <div class="field">
-		                <input id="personal-settlement" class="text input" name="personal-settlement" type="text" placeholder="Colonia">
+		                <input id="personal-settlement" class="text input" name="personalSettlement" type="text" placeholder="Colonia">
 		              </div> 
 		            </div>
 
 		            <div class="two columns">
 		              <label for="personal-zipcode">Codigo Postal</label>
 		              <div class="field">
-		                <input id="personal-zipcode" class="text input" name="personal-zipcode" type="text" placeholder="Codigo Postal"  >
+		                <input id="personal-zipcode" class="text input" name="personalZipcode" type="text" placeholder="Codigo Postal"  >
 		              </div>
 		            </div>
 		         </div>
@@ -195,21 +195,21 @@
 				    <div class="six columns">
 		              <label for="personal-delegation">Municipio o Delegación</label>
 		              <div class="field">
-		                <input id="personal-delegation" class="text input" name="personal-delegation" type="text" placeholder="Municipio o Delegación"  >
+		                <input id="personal-delegation" class="text input" name="personalDelegation" type="text" placeholder="Municipio o Delegación"  >
 		              </div>
 		            </div>
 		            
 		            <div class="four columns">
 		              <label for="personal-city">Ciudad</label>
 		              <div class="field">
-		                <input id="personal-city" class="text input" name="personal-city" type="text" placeholder="Ciudad">
+		                <input id="personal-city" class="text input" name="personalCity" type="text" placeholder="Ciudad">
 		              </div> 
 		            </div>
 
 		            <div class="two columns">
 		              <label for="personal-state">Estado</label>
 		              <div class="field">
-		                <input id="personal-state" class="text input" name="personal-state" type="text" placeholder="Estado"  >
+		                <input id="personal-state" class="text input" name="personalState" type="text" placeholder="Estado"  >
 		              </div>
 		            </div>
 		         </div>
@@ -227,23 +227,23 @@
 		    <div class="row">
 		  		<div class="twelve columns">
 				    <div class="six columns">
-		              <label for="personal-street">Calle</label>
+		              <label for="work-street">Calle</label>
 		              <div class="field">
-		                <input id="personal-street" class="text input" name="personal-street" type="text" placeholder="Calle"  >
+		                <input id="work-street" class="text input" name="workStreet" type="text" placeholder="Calle"  >
 		              </div>
 		            </div>
 		            
 		            <div class="four columns">
-		              <label for="personal-settlement">Colonia</label>
+		              <label for="work-settlement">Colonia</label>
 		              <div class="field">
-		                <input id="personal-settlement" class="text input" name="personal-settlement" type="text" placeholder="Colonia">
+		                <input id="work-settlement" class="text input" name="workSettlement" type="text" placeholder="Colonia">
 		              </div> 
 		            </div>
 
 		            <div class="two columns">
-		              <label for="personal-zipcode">Codigo Postal</label>
+		              <label for="work-zipcode">Codigo Postal</label>
 		              <div class="field">
-		                <input id="personal-zipcode" class="text input" name="personal-zipcode" type="text" placeholder="Codigo Postal"  >
+		                <input id="work-zipcode" class="text input" name="workZipcode" type="text" placeholder="Codigo Postal"  >
 		              </div>
 		            </div>
 		         </div>
@@ -252,23 +252,23 @@
 		      <div class="row">
 		  		<div class="twelve columns">
 				    <div class="six columns">
-		              <label for="personal-delegation">Municipio o Delegación</label>
+		              <label for="work-delegation">Municipio o Delegación</label>
 		              <div class="field">
-		                <input id="personal-delegation" class="text input" name="personal-delegation" type="text" placeholder="Municipio o Delegación"  >
+		                <input id="work-delegation" class="text input" name="workDelegation" type="text" placeholder="Municipio o Delegación"  >
 		              </div>
 		            </div>
 		            
 		            <div class="four columns">
-		              <label for="personal-city">Ciudad</label>
+		              <label for="work-city">Ciudad</label>
 		              <div class="field">
-		                <input id="personal-city" class="text input" name="personal-city" type="text" placeholder="Ciudad">
+		                <input id="work-city" class="text input" name="workCity" type="text" placeholder="Ciudad">
 		              </div> 
 		            </div>
 
 		            <div class="two columns">
-		              <label for="personal-state">Estado</label>
+		              <label for="work-state">Estado</label>
 		              <div class="field">
-		                <input id="personal-state" class="text input" name="personal-state" type="text" placeholder="Estado"  >
+		                <input id="work-state" class="text input" name="workState" type="text" placeholder="Estado"  >
 		              </div>
 		            </div>
 		         </div>

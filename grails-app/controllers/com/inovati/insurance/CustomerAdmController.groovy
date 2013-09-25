@@ -104,16 +104,20 @@ class CustomerAdmController {
     	[payersList:payersList]
     }
 
-     def show(){
-       
-        
+    def show(long id){
+
+       println "show: " + id
+      def genders = customerAdmService.getGenders()
+      def professions = customerAdmService.getProfessions()
+      [customer:Person.get(id),genders:genders,professions:professions]  
     }
 
     def createPayer(){
       def genders = customerAdmService.getGenders()
       def professions = customerAdmService.getProfessions()
       [genders:genders,professions:professions]
-    }   
+    }
+
 }
 
 

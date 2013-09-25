@@ -16,6 +16,13 @@ class Address {
 	static mappedBy = [peopleWork:"workAddress",peoplePersonal:"personalAddress"]
 
     static constraints = {
+    	street(nullable:true,blank:true)
+	    number(nullable:true,blank:true)
+	    colony(nullable:true,blank:true)
+	    postalCode(nullable:true,blank:true)
+	    city(nullable:true,blank:true)
+	    state(nullable:true,blank:true)
+	    delegation(nullable:true,blank:true)
     }
 
     String toString(){

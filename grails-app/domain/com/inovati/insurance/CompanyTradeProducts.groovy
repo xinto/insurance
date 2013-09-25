@@ -11,6 +11,7 @@ class CompanyTradeProducts {
     static constraints = {
     	insuranceCompany(nullable:false,blank:false)
     	companyTrade(nullable:false,blank:false)
+        productsProductTypes(nullable:false,blank:false)
     }
 
     String toString(){
