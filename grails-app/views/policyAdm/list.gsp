@@ -4,6 +4,17 @@
 		<meta name="layout" content="main">
 	</head>
 	<body>
+
+		<div class="wrapper shaded">
+          <div class="row topspace">
+            <div class="ten columns">
+              <h4>
+                <label style="font-weight: bold;text-align:center;">Lista de Polizas</label>
+              </h4>
+            </div>
+            
+          </div>
+      </div>
 		
 		<div class="wrapper nopad">
 			<div class="row">

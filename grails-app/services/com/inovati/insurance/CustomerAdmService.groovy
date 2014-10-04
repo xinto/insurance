@@ -48,6 +48,35 @@ class CustomerAdmService {
         person
     }
 
+    def updateCustomer(long id, def params){
+        def personInstance = Person.get(id)
+        if (!personInstance) {
+            return
+        }
+        personInstance.properties = params
+
+        personInstance.birthDate = params.birthdate == "" ? new Date() : new Date().parse("dd/M/yyyy",params.birthdate)
+
+        personInstance.personalAddress.street = params.personalStreet
+        personInstance.personalAddress.colony = params.personalSettlement
+        personInstance.personalAddress.postalCode = params.int('personalZipcode')
+        personInstance.personalAddress.city = params.personalCity
+        personInstance.personalAddress.state = params.personalState
+        personInstance.personalAddress.delegation = params.personalDelegation
+
+        personInstance.workAddress.street = params.workStreet
+        personInstance.workAddress.colony = params.workSettlement
+        personInstance.workAddress.postalCode = params.int('workZipcode')
+        personInstance.workAddress.city = params.workCity
+        personInstance.workAddress.state = params.workState
+        personInstance.workAddress.delegation = params.workDelegation
+
+        if (!personInstance.save(flush: true)) {
+            throw new RuntimeException("Error al crear person")
+        }
+        personInstance
+    }
+
     def getPayers() {
     	def payersList = Person.findAll("from Person as p where p.isPayer != null order by p.id") 
     	payersList

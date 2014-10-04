@@ -32,6 +32,20 @@ class CustomerAdmController {
                           def newCustomer = new Person([name:it,isPayer:customerParams.isPayer])
                           newCustomer.active = true
                           newCustomer.isContractor = false
+                          def personalAddress = new Address()
+                          if (!personalAddress.save(flush: true)) {
+                              println "Error in personalAddress save"
+                          }
+
+                          newCustomer.personalAddress = personalAddress
+
+                          def workAddress = new Address()
+
+                          if (!workAddress.save(flush: true)) {
+                              println "Error in workAddress save"
+                          }
+
+                          newCustomer.workAddress = workAddress
                           
                           if (!newCustomer.save(flush: true)) {
                             println "Error in save"
@@ -43,7 +57,22 @@ class CustomerAdmController {
                           def newCustomer = new Person([name:customerName[0],lastname:customerName[1],isPayer:customerParams.isPayer])
                           newCustomer.active = true
                           newCustomer.isContractor = false
-                          
+
+                          def personalAddress = new Address()
+                          if (!personalAddress.save(flush: true)) {
+                              println "Error in personalAddress save"
+                          }
+
+                          newCustomer.personalAddress = personalAddress
+
+                          def workAddress = new Address()
+
+                          if (!workAddress.save(flush: true)) {
+                              println "Error in workAddress save"
+                          }
+
+                          newCustomer.workAddress = workAddress
+
                           if (!newCustomer.save(flush: true)) {
                             println "Error in save"
                           }
@@ -53,6 +82,21 @@ class CustomerAdmController {
                         def newCustomer = new Person([lastname:customerName[0],secondLastname:customerName[1],name:customerName[2],isPayer:customerParams.isPayer])
                           newCustomer.active = true
                           newCustomer.isContractor = false
+                          
+                          def personalAddress = new Address()
+                          if (!personalAddress.save(flush: true)) {
+                              println "Error in personalAddress save"
+                          }
+
+                          newCustomer.personalAddress = personalAddress
+
+                          def workAddress = new Address()
+
+                          if (!workAddress.save(flush: true)) {
+                              println "Error in workAddress save"
+                          }
+
+                          newCustomer.workAddress = workAddress
                           
                           if (!newCustomer.save(flush: true)) {
                             println "Error in save"
@@ -65,6 +109,21 @@ class CustomerAdmController {
                           newCustomer.active = true
                           newCustomer.isContractor = false
                           
+                          def personalAddress = new Address()
+                          if (!personalAddress.save(flush: true)) {
+                              println "Error in personalAddress save"
+                          }
+
+                          newCustomer.personalAddress = personalAddress
+
+                          def workAddress = new Address()
+
+                          if (!workAddress.save(flush: true)) {
+                              println "Error in workAddress save"
+                          }
+
+                          newCustomer.workAddress = workAddress
+                          
                           if (!newCustomer.save(flush: true)) {
                             println "Error in save"
                           }
@@ -75,6 +134,21 @@ class CustomerAdmController {
                           def newCustomer = new Person([name:it,isPayer:customerParams.isPayer])
                           newCustomer.active = true
                           newCustomer.isContractor = false
+                          
+                          def personalAddress = new Address()
+                          if (!personalAddress.save(flush: true)) {
+                              println "Error in personalAddress save"
+                          }
+
+                          newCustomer.personalAddress = personalAddress
+
+                          def workAddress = new Address()
+
+                          if (!workAddress.save(flush: true)) {
+                              println "Error in workAddress save"
+                          }
+
+                          newCustomer.workAddress = workAddress
                           
                           if (!newCustomer.save(flush: true)) {
                             println "Error in save"
@@ -110,6 +184,14 @@ class CustomerAdmController {
       def genders = customerAdmService.getGenders()
       def professions = customerAdmService.getProfessions()
       [customer:Person.get(id),genders:genders,professions:professions]  
+    }
+
+    def updatePayer(long id){
+     // println "params: " + params
+    //  def id = params.int('id')
+      customerAdmService.updateCustomer(id,params)
+      flash.message = message(code: 'Cliente Actualizado')
+      redirect(action: "show", id:id)
     }
 
     def createPayer(){

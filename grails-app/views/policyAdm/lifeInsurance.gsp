@@ -15,11 +15,11 @@
     </head>
     <body>
         <div class="wrapper shaded">
-      <div class="row topspace">
-        <div class="ten columns">
-          <h4>
-            <label style="font-weight: bold;text-align:center;">Solicitud de Seguro de Vida Individual</label>
-          </h4>
+          <div class="row topspace">
+            <div class="ten columns">
+              <h4>
+                <label style="font-weight: bold;text-align:center;">Solicitud de Seguro de Vida Individual</label>
+              </h4>
             </div>
             
           </div>

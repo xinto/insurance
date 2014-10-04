@@ -28,7 +28,11 @@
             <div class="errors" role="status">${flash.errors}</div>
       </div>
     </div>
-<form class="form-horizontal" controller="customerAdm" action="addNewPayer" method="post">
+
+<g:form action="updatePayer" method="post" >
+
+  <g:hiddenField name="id" value="${customer?.id}" />
+
     <div class="row">
       <div class="three columns">
               <label for="folio">Folio</label>
@@ -284,11 +288,11 @@
     <div class="row">
       <div class="push_five two columns">
           <p class="pretty medium warning btn" style="margin-left: 30px;">
-          <input type="submit" value="Guardar">
+          <g:actionSubmit action="updatePayer" value="Guardar" />
         </p>
         </div>
     </div>
-  </form>
+  </g:form>
   </body>
 
 </html>
