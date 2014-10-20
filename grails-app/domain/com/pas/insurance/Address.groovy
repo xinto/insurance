@@ -5,5 +5,8 @@ class Address {
     static constraints = {
     }
 
+    static mapping = {
+	    autoImport false
+	}
 
 }

@@ -7,5 +7,8 @@ class Currency {
     static constraints = {
     }
 
+    static mapping = {
+	    autoImport false
+	}
   
 }

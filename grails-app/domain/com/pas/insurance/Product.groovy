@@ -5,4 +5,8 @@ class Product {
     static constraints = {
     }
 
+    static mapping = {
+	    autoImport false
+	}
+
 }

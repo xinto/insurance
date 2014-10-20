@@ -5,4 +5,8 @@ class Policy {
     static constraints = {
     }
 
+    static mapping = {
+	    autoImport false
+	}
+
 }
