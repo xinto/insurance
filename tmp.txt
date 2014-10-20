@@ -1,4 +1,4 @@
 insurance grails  project
 insor
 
-git push ins or master
+git push insor master
