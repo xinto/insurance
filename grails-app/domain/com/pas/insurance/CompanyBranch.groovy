@@ -1,4 +1,4 @@
-package com.gcx.insurance
+package com.pas.insurance
 
 class CompanyBranch {
 

@@ -1,8 +1,6 @@
-package com.gcx.insurance
+package com.pas.insurance
 
-class Currency {
-
-	
+class Person {
 
     static constraints = {
     }
