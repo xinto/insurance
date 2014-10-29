@@ -1,12 +1,14 @@
 package com.pas.insurance
 
-class Product {
+class ProductP {
+
+	Integer branchId
+	Integer companyId
+	String  productName
+	String  description
+	Boolean active
 
     static constraints = {
     }
-
-    static mapping = {
-	    autoImport false
-	}
 
 }

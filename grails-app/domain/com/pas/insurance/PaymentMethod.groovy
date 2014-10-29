@@ -1,12 +1,14 @@
 package com.pas.insurance
 
-class PaymentMethod {
+class PaymentMethodP {
+
+	String  name
+	String  description
+	Boolean active
+	Integer cardId
 
     static constraints = {
     }
 
-    static mapping = {
-	    autoImport false
-	}
 
 }

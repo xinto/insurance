@@ -1,14 +1,14 @@
 package com.pas.insurance
 
-class Currency {
+class CurrencyP {
 
-	
+	String  currencyName
+	String  currencyKey
+	String  description
+	Boolean active
 
     static constraints = {
     }
 
-    static mapping = {
-	    autoImport false
-	}
   
 }

@@ -1,6 +1,7 @@
 import com.inovati.insurance.*
 import grails.util.Environment
 import java.util.*
+
 class BootStrap {
 
     def init = { servletContext ->

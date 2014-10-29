@@ -1,11 +1,18 @@
 package com.pas.insurance
 
-class Person {
+class PersonP {
+
+	String  legalName
+	String  givenName
+	String  lastname
+	String  secondLastname
+	String  rfc
+	Boolean legalEntity
+	Boolean payer
+	Date    registrationDate
+	Boolean active
 
     static constraints = {
     }
 
-    static mapping = {
-	    autoImport false
-	}
 }
